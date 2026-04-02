@@ -187,7 +187,7 @@ function switchMode(mode) {
 
   const locations = {
     overview: { loc: '泰兴市新街镇叶垛家利', coords: '32.18°N, 120.07°E' },
-    testfield: { loc: '泰兴市新街镇试验田', coords: '点击地图获取坐标' },
+    testfield: { loc: '泰兴市新街镇试验田', coords: '32.252913°N, 120.097362°E' },
     workshop: { loc: '根蔡线附近', coords: '32.17°N, 120.08°E' },
     warehouse: { loc: '根蔡线附近', coords: '32.17°N, 120.08°E' }
   }

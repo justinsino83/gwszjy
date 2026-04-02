@@ -1,0 +1,51 @@
+/* 全局基础样式 */
+:root {
+  --neon-green: #00FF88;
+  --neon-cyan: #00FFFF;
+  --dark-bg: #030810;
+  --panel-bg: rgba(0, 20, 40, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: var(--dark-bg);
+  color: #E0E0E0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 255, 136, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.5);
+}
+
+/* Cesium 容器 */
+.cesium-viewer .cesium-widgetCanvas {
+  width: 100% !important;
+  height: 100% !important;
+}

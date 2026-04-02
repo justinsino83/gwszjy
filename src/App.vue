@@ -204,9 +204,7 @@ function switchMode(mode) {
 }
 
 function handleMapClick({ lon, lat }) {
-  if (currentMode.value === 'testfield') {
-    currentCoords.value = `${lat}°N, ${lon}°E`
-  }
+  currentCoords.value = `${lat}°N, ${lon}°E`
 }
 
 function handlePopup(data) {

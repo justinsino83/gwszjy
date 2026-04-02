@@ -22,8 +22,8 @@ const emit = defineEmits(['mapClick'])
 const locations = {
   overview: { lon: 120.07, lat: 32.18, height: 20000, pitch: -45 },
   testfield: { lon: 120.097362, lat: 32.252913, height: 500, pitch: -45 },
-  workshop: { lon: 120.095096, lat: 32.245153, height: 20, pitch: -45 },
-  warehouse: { lon: 120.095096, lat: 32.245153, height: 20, pitch: -45 }
+  workshop: { lon: 120.089750, lat: 32.247041, height: 300, pitch: -45 },
+  warehouse: { lon: 120.089750, lat: 32.247041, height: 300, pitch: -45 }
 }
 
 async function loadCesium() {

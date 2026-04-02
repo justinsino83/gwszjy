@@ -187,9 +187,9 @@ function switchMode(mode) {
 
   const locations = {
     overview: { loc: '泰兴市新街镇叶垛家利', coords: '32.18°N, 120.07°E' },
-    testfield: { loc: '泰兴市新街镇试验田', coords: '32.252913°N, 120.097362°E' },
-    workshop: { loc: '根蔡线附近', coords: '32.247041°N, 120.089750°E' },
-    warehouse: { loc: '根蔡线附近', coords: '32.247041°N, 120.089750°E' }
+    testfield: { loc: '泰兴市新街镇试验田', coords: '32.250635°N, 120.097553°E' },
+    workshop: { loc: '根蔡线附近', coords: '32.244513°N, 120.089928°E' },
+    warehouse: { loc: '根蔡线附近', coords: '32.244513°N, 120.089928°E' }
   }
 
   currentLocation.value = locations[mode].loc

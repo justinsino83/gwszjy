@@ -17,6 +17,7 @@ const props = defineProps({
 const container = ref(null)
 let viewer = null
 let Cesium = null
+const emit = defineEmits(['mapClick'])
 
 const locations = {
   overview: { lon: 120.07, lat: 32.18, height: 20000, pitch: -45 },
@@ -63,6 +64,19 @@ async function initCesium() {
     })
 
     const scene = viewer.scene
+
+    // 监听地图点击事件，获取动态经纬度
+    const handler = new Cesium.ScreenSpaceEventHandler(scene.canvas)
+    handler.setInputAction(function (click) {
+      const ray = viewer.camera.getPickRay(click.position)
+      const cartesian = scene.globe.pick(ray, scene)
+      if (cartesian) {
+        const cartographic = Cesium.Cartographic.fromCartesian(cartesian)
+        const lon = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6)
+        const lat = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6)
+        emit('mapClick', { lon, lat })
+      }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
     scene.globe.enableLighting = false
 
     // Make globe surface transparent for lower layers to show through
